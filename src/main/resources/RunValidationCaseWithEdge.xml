@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Run Validation Case With Edge">
+
+	<!-- Way 1: Run all test cases in the classes that has groups="main" -->
+	<test name="Run validation case by default">
+		<groups>
+			<run>
+				<include name="validation" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="test.HomePageTest" />
+			<class name="test.UserLogInPageTest" />
+			<class name="test.UserEditInformationPageTest" />
+			<class name="test.UserSearchApplicationPageTest" />
+			<class name="test.UserSignOutPageTest" />
+			<class name="test.UserSignUpPageTest" />
+			<class name="test.UserViewMarriageApplicationPageTest" />
+			<class name="test.RegistrationFormPageTest" />
+			<class name="test.UserResetPasswordPageTest" />
+			<class name="test.AdminDashboardPageTest" />
+			<class name="test.AdminLogInPageTest" />
+			<class name="test.AdminEditProfilePageTest" />
+			<class name="test.AdminNotificationPageTest" />
+			<class name="test.AdminSearchApplicationPageTest" />
+			<class name="test.AdminTakeActionPageTest" />
+			<class name="test.AdminViewReportPageTest" />
+			
+			
+			
+			
+			
+		</classes>
+
+	</test>
+
+
+	<!-- SampleTestNG -->
+</suite> <!-- DemoSuite -->
