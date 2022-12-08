@@ -1,5 +1,7 @@
 package test;
 
+import java.io.File;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -17,8 +19,8 @@ public void openBrowser() {
 public void closeBrowser() {
 	driver.quit();
 }
-
-public String dataFilePath="D:\\AutomationTest\\02Projects\\OnlineMarriageRegistration\\TestData\\OMR_TestData.xlsx";
+public File data= new File("TestData/OMR_TestData.xlsx");
+public String dataFilePath=data.getAbsolutePath();
 
 
 }

@@ -15,7 +15,7 @@ public class AdminLogInPageTest extends TestCase{
 	@DataProvider(name = "Sign In Successfully Data")
 	public String[][] SignInSuccessfullyData() throws IOException {
 		Excelutils excelUtils= new Excelutils();
-		String[][] data=excelUtils.getDataFromExcel("D:\\AutomationTest\\02Projects\\OnlineMarriageRegistration\\TestData\\OMR_TestData.xlsx", "AdminLogInSuccessfully");
+		String[][] data=excelUtils.getDataFromExcel(dataFilePath, "AdminLogInSuccessfully");
 return data;
 	}
 	@Test(description="Validate Sign In Successfully", groups="main", dataProvider = "Sign In Successfully Data")
@@ -32,7 +32,7 @@ return data;
 	@DataProvider(name = "Sign In Invalid Data", indices = {0,1})
 	public String[][] SignInInvalidData() throws IOException {
 		Excelutils excelUtils= new Excelutils();
-		String[][] data=excelUtils.getDataFromExcel("D:\\AutomationTest\\02Projects\\OnlineMarriageRegistration\\TestData\\OMR_TestData.xlsx", "AdminLogInFail");
+		String[][] data=excelUtils.getDataFromExcel(dataFilePath, "AdminLogInFail");
 return data;
 	}
 	
@@ -50,7 +50,7 @@ return data;
 	@DataProvider(name = "Sign In With Field Blank", indices = {2,3})
 	public String[][] SignInWithFieldBlankData() throws IOException {
 		Excelutils excelUtils= new Excelutils();
-		String[][] data=excelUtils.getDataFromExcel("D:\\AutomationTest\\02Projects\\OnlineMarriageRegistration\\TestData\\OMR_TestData.xlsx", "AdminLogInFail");
+		String[][] data=excelUtils.getDataFromExcel(dataFilePath, "AdminLogInFail");
 return data;
 	}
 	

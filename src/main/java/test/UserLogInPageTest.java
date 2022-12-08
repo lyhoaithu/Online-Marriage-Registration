@@ -16,7 +16,7 @@ public class UserLogInPageTest extends TestCase {
 	public String[][] logInSuccessfullyData() throws IOException {
 		Excelutils excel = new Excelutils();
 		String[][] data = excel.getDataFromExcel(
-				"D:\\AutomationTest\\02Projects\\OnlineMarriageRegistration\\TestData\\OMR_TestData.xlsx",
+				dataFilePath,
 				"UserLogInSuccessfully");
 		return data;
 	}
@@ -36,7 +36,7 @@ public class UserLogInPageTest extends TestCase {
 	public String[][] logInUsingInvalidData() throws IOException {
 		Excelutils excel = new Excelutils();
 		String[][] data = excel.getDataFromExcel(
-				"D:\\AutomationTest\\02Projects\\OnlineMarriageRegistration\\TestData\\OMR_TestData.xlsx",
+				dataFilePath,
 				"UserLogInFail");
 		return data;
 	}
@@ -56,7 +56,7 @@ public class UserLogInPageTest extends TestCase {
 	public String[][] logInMissingSomeData() throws IOException {
 		Excelutils excel = new Excelutils();
 		String[][] data = excel.getDataFromExcel(
-				"D:\\AutomationTest\\02Projects\\OnlineMarriageRegistration\\TestData\\OMR_TestData.xlsx",
+				dataFilePath,
 				"UserLogInFail");
 		return data;
 	}
@@ -81,7 +81,7 @@ public class UserLogInPageTest extends TestCase {
 	public String[][] logInUsingInvalidDataForm() throws IOException {
 		Excelutils excel = new Excelutils();
 		String[][] data = excel.getDataFromExcel(
-				"D:\\AutomationTest\\02Projects\\OnlineMarriageRegistration\\TestData\\OMR_TestData.xlsx",
+				dataFilePath,
 				"UserLogInFail");
 		return data;
 	}

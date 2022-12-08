@@ -2,6 +2,7 @@ package common;
 
 import static org.testng.Assert.assertEquals;
 
+import java.io.File;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -22,14 +23,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class TestBase {
 public WebDriver driver;
 public void openBroswer(String browser) {
-	if(browser.equalsIgnoreCase("edge")) {
-		System.setProperty("webdriver.edge.driver", "D:\\AutomationTest\\02Projects\\OnlineMarriageRegistration\\driver\\msedgedriver.exe");
-	driver=new EdgeDriver();
-	}
-	else if (browser.equalsIgnoreCase("chrome")) {
-		System.setProperty("webdriver.chrome.driver", "D:\\AutomationTest\\02Projects\\OnlineMarriageRegistration\\driver\\chromedriver.exe");
-	driver= new ChromeDriver();
-	}
+	File file01= new File("driver/msedgedriver.exe");
+	File file02= new File("driver/chromedriver.exe");
+	if(browser.equalsIgnoreCase("chrome")) {
+		System.setProperty("webdriver.chrome.driver", file02.getAbsolutePath());
+		driver = new ChromeDriver();
+}
+	else if(browser.equalsIgnoreCase("edge")) {
+		System.setProperty("webdriver.edge.driver", file01.getAbsolutePath());
+		driver = new EdgeDriver();
+}
 driver.manage().window().maximize();
 }
 
